@@ -15,7 +15,7 @@ class Position < ActiveRecord::Base
 end
 
 get "/positions" do
- @contacts = Position.all
+ @positions = Position.all
  erb :index
 end
 
