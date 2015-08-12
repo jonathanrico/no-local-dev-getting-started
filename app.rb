@@ -10,14 +10,14 @@ get "/" do
 end
 
 
-class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+class Position < ActiveRecord::Base
+  self.table_name = 'cirrus.position__c'
 end
 
-#get "/contacts" do
-#  @contacts = Contact.all
-#  erb :index
-#end
+get "/positions" do
+ @contacts = Position.all
+ erb :index
+end
 
 get "/create" do
   CREATE_URL = 'https://connect.heroku.com/dashboard-next/create-connection'
